@@ -1,0 +1,7 @@
+.data-content img {
+    width: 50px;
+}
+.data-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}

@@ -1,5 +1,5 @@
-import { podcasts } from "./data.js";
-import { genres  } from "./data.js";
+import { podcasts, genres } from "./data.js";
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,10 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
     podcasts.forEach(item => {
         const dataDiv = document.createElement('div');
         dataDiv.className = 'data-content';
+    //Linking ID's to genres
+        const genreSpes = item.genres
+            .map(id => genres.find(genre => genre.id === id)?.title || "Unknown")
+            .join(", ");
         dataDiv.innerHTML = `
+        <img src="${item.image}" alt="${item.title}"/>
         <h3>${item.title}</h3>
-        <p>${item.seasons}</p>
-        <span>${item.genres}</span>
+        <p>${item.seasons} seasons</p>
+        <span>${genreSpes}</span>
         <small>${item.updated}</small>
         `;
         container.appendChild(dataDiv);
