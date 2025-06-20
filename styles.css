@@ -1,7 +1,43 @@
-.data-content img {
-    width: 50px;
-}
 .data-container {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.data-content {
+    background-color: white;
+    width: 320px;
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    border-radius: 3%;
+}
+
+.data-content img {
+    width: 87%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 3%;
+}
+
+.data-content h3 {
+    font-weight: 600;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.data-content p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.data-content p img {
+    width: 15px;
+    height: 15px;
+    margin: 0px;
 }

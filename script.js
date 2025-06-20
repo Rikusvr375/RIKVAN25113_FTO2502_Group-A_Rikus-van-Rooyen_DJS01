@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dataDiv.innerHTML = `
         <img src="${item.image}" alt="${item.title}"/>
         <h3>${item.title}</h3>
-        <p>${item.seasons} seasons</p>
+        <p><img src="icons/calender-icon.svg" alt="calender-icon"/>${item.seasons} seasons</p>
         <span>${genreSpes}</span>
         <small>${item.updated}</small>
         `;
