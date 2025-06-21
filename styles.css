@@ -34,10 +34,32 @@
     gap: 5px;
     padding-left: 20px;
     padding-top: 10px;
+    font-size: 14px;
 }
 
 .data-content p img {
     width: 15px;
     height: 15px;
     margin: 0px;
+}
+
+.data-content span {
+    padding-left: 20px;
+}
+
+.genre-button {
+    display: inline-block;
+    background-color: #f0f0f0;
+    border: none;
+    padding: 4px 10px;
+    margin-right: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+.data-content small {
+    display: flex;
 }

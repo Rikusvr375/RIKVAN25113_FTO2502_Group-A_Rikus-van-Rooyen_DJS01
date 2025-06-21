@@ -14,12 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
     //Linking ID's to genres
         const genreSpes = item.genres
             .map(id => genres.find(genre => genre.id === id)?.title || "Unknown")
-            .join(", ");
+            .join(" ");
+
+        const genreButtons = item.genres
+            .map(id => genres.find(genre => genre.id === id)?.title || "Unknown")
+            .map(genre => `<button class="genre-button">${genre}</button>`)
+            .join("");
+
         dataDiv.innerHTML = `
         <img src="${item.image}" alt="${item.title}"/>
         <h3>${item.title}</h3>
         <p><img src="icons/calender-icon.svg" alt="calender-icon"/>${item.seasons} seasons</p>
-        <span>${genreSpes}</span>
+        <span>${genreButtons}</span>
         <small>${item.updated}</small>
         `;
         container.appendChild(dataDiv);
